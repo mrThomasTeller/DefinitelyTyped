@@ -947,7 +947,7 @@ declare namespace R {
          * returns the result. Subsequent calls to the memoized fn with the same argument set will not result in an
          * additional call to fn; instead, the cached result for that set of arguments will be returned.
          */
-        memoize(fn: Function): Function;
+        memoize<T extends Function>(fn: T): T;
 
         /**
          * Create a new object with the own properties of a
